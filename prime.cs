@@ -10,7 +10,7 @@ interface Iprime{
 public class prime : Iprime{
 
     public Boolean check_prime(int number){
-        for (int loopVar = 2 ; loopVar < number / 2 ; ++loopVar){
+        for (int loopVar = 2 ; loopVar*loopVar <= number ; ++loopVar){
             if (number % loopVar == 0) 
             return false;
         }
@@ -29,9 +29,11 @@ public class prime : Iprime{
             Console.WriteLine("Not a Prime Number");
         }
     }
+}
 
+public class main_class : prime {
     public static void Main(String[] args){
-        prime obj = new prime();
+        main_class obj = new main_class();
         obj.show_result(obj.check_prime(obj.read_number()));
         // waiting for user enter any key
         Console.ReadKey();

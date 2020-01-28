@@ -13,7 +13,6 @@ interface Imathematics {
     void menu_driven();
     void is_number_prime();
     void find_factorial();
-
 }
 
 class basic : Ibasic {
@@ -37,7 +36,7 @@ class basic : Ibasic {
             return false;
         }
         return true;
-    }
+    }   
 }
 
 class mathematics : basic,Imathematics {
